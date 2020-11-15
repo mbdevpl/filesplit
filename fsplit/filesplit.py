@@ -19,7 +19,7 @@ class Filesplit:
         """
         self.log = logging.getLogger(__name__).getChild(self.__class__.__name__)
         self.man_filename = "fs_manifest.csv"
-        self._buffer_size = 1000000  # 1 MB
+        self._buffer_size = 1024 ** 2  # 1 MiB
 
     def __process_split(
         self,
